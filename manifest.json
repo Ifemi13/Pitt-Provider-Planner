@@ -10,5 +10,8 @@
   "action": {
     "default_popup": "startUp.html",
     "default_icon": "hello_extensions.png"
+  },
+  "oauth2":{
+    "client_id": "499252790815-1i2afaa9un13oj0l65t2rln3kaej9b85.apps.googleusercontent.com"
   }
 }
