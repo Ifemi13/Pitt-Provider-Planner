@@ -1,2 +1,11 @@
 # Pitt-Provider-Planner
-text explaining program goes here
+Team Members:
+Ifemi Olojo-Kosoko
+Kee Ravindran
+Mitchell Dumm
+Vrusha Shah
+
+Purpose of Project:
+
+
+Tools Used:
