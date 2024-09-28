@@ -16,6 +16,31 @@ function initClient() {
     });
 }
 
+
+function authenticate() {
+    return new Promise((resolve, reject) => {
+        chrome.identity.getAuthToken({ interactive: true }, (token) => {
+            if (chrome.runtime.lastError || !token) {
+                reject(chrome.runtime.lastError);
+            } else {
+                resolve(token);
+            }
+        });
+    });
+}
+
+async function fetchCalendarEvents() {
+    const token = await authenticate();
+    const response = await fetch('https://www.googleapis.com/calendar/v3/calendars/primary/events', {
+        headers: {
+            Authorization: `Bearer ${token}`
+        }
+    });
+    const events = await response.json();
+    console.log(events);
+}
+
+
 function fetchEvents() {
     gapi.client.calendar.events.list({
         'calendarId': 'primary',
