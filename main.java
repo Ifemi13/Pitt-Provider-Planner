@@ -4,6 +4,14 @@ class PittPlanner {
 
         System.out.println("Test");
 
+
+        readDataFile data = new readDataFile();
+        data.readDoctorData();
+
+        
+
     }
 
 }
+
+//
