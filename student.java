@@ -14,11 +14,11 @@ class Student {
     }
 
    public Student(String n, String l, String s, String e, int d){
-        n = nameOfCommitment;
-        l = location;
-        s = startTime;
-        e= endTime; 
-        d = day;
+        nameOfCommitment = n;
+        location = l;
+        startTime = s;
+        endTime = e; 
+        day = d;
     }
 
     public String getNameOfCommitment(){
