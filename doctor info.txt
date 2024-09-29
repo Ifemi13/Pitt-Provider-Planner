@@ -81,7 +81,7 @@ Doctor Appointments
 
 14. Doctor: Dr. Emily Harris, PhD
     Day: Sunday
-    Time: 3:30 PM
+    Time: 3:30 AM
     Appointment Type: Psychiatric Evaluation
 
 
@@ -90,4 +90,4 @@ Doctor Appointments
     Time: 2:00 PM
     Appointment Type: Gastroenterology Checkup
 
-    
+

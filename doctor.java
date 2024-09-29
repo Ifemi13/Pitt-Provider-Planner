@@ -2,7 +2,8 @@ class Doctor {
 
     String name;
     String title;
-    String timeAvail;
+    int timeAvail;
+    String timeString;
     String appointmentTypes;
     int day;
 
@@ -10,17 +11,19 @@ class Doctor {
     public Doctor() {
         name = " ";
         title = " ";
-        timeAvail = " ";
+        timeAvail = 0;
+        timeString = " ";
         day = 0;
         appointmentTypes = " ";
     }
 
-    public Doctor(String n, int d, String tI, String tA, String a){
+    public Doctor(String n, int d, String tI, int tA, String a, String tS){
         name = n;
         title = tI;
         timeAvail = tA;
         appointmentTypes = a;
         day = d;
+        timeString = tS;
     }
 
     public String getName(){
@@ -28,7 +31,7 @@ class Doctor {
     }
 
     public void setName(String n){
-        n = name;
+        name = n;
     }
 
     public String getTitle(){
@@ -36,7 +39,7 @@ class Doctor {
     }
 
     public void setTitle(String t){
-        t = title;
+        title = t;
     }
 
     public int getDay(){
@@ -44,23 +47,31 @@ class Doctor {
     }
 
     public void setDay(int d){
-        d = day;
+        day = d;
     }
 
-    public String getTimeAvail(){
+    public int getTimeAvail(){
         return timeAvail;
     }
 
-    public void setTimeAvail(String t){
-        t = timeAvail;
+    public void setTimeAvail(int t){
+        timeAvail = t;
     }
 
-        public String getAppointmentTypes(){
+    public String getTimeString(){
+        return timeString;
+    }
+
+    public void setTimeString(String tS){
+        timeString = tS;
+    }
+
+    public String getAppointmentTypes(){
         return appointmentTypes;
     }
 
     public void setAppointmentTypes(String a){
-        a = appointmentTypes;
+        appointmentTypes = a;
     }
 
     // end of all of the get and set methods for the doctor class
