@@ -32,7 +32,7 @@ public class compareSchedule {
     public void getDoctorAvailability(ArrayList<Doctor> doctorInfo) {
         for (Doctor doctor : doctorInfo) {
             String day = getDayString(doctor.getDay());
-            String timeSlot = doctor.getTimeAvail();
+            String timeSlot = doctor.getTimeString();
             doctorAvail.computeIfAbsent(day, k -> new ArrayList<>()).add(timeSlot);
         }
     }
