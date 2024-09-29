@@ -1,5 +1,5 @@
 import java.io.*;
-import java.util.Scanner;
+import java.util.*;
 
 class readDataFile {
 
@@ -10,6 +10,8 @@ class readDataFile {
     String time;
     String appointmentType;
     int day;
+
+    static ArrayList<Doctor> doctorInfo = new ArrayList<>();
 
     public void readDoctorData(){
         try(Scanner file = new Scanner(new File("doctor info.txt"))) {
