@@ -4,6 +4,7 @@ class PittPlanner {
 
         //System.out.println("Test");
 
+        System.out.println("Welcome to Pitt Provider Planer!\n");
 
         readDataFile data = new readDataFile();
         data.readDoctorData();
