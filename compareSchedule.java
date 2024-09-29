@@ -1,4 +1,6 @@
 import java.util.*;
+import java.util.jar.Attributes;
+import javax.xml.crypto.Data;
 
 public class compareSchedule{
     int day;
@@ -11,10 +13,11 @@ public class compareSchedule{
     }
 
 
+
     HashMap<String, ArrayList<String>> studentAvail = new HashMap<>();
     public void getStudentAvailability(Student s){
 
-
+        
 
     }
 

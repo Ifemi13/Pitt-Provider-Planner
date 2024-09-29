@@ -4,24 +4,31 @@ import java.util.*;
 class readDataFile {
 
 
-    Doctor doctor;
     String doctorName;
     String doctorTitle;
     String time;
     String appointmentType;
     int day;
 
-    static ArrayList<Doctor> doctorInfo = new ArrayList<>();
+    ArrayList<Doctor> doctorInfo = new ArrayList<>();
 
     public void readDoctorData(){
         try(Scanner file = new Scanner(new File("doctor info.txt"))) {
             System.out.println("Found.");
+            //for intial starting of file
+            String s = file.nextLine();
+            String s2 = file.nextLine();
+            String s3 = file.nextLine();
             while(file.hasNextLine()){
                 Doctor d = new Doctor();
                 doctorName = file.nextLine();
                 String dayString = file.nextLine();
                 time = file.nextLine();
                 appointmentType = file.nextLine();
+
+                //for extra spaces
+                String s4 = file.nextLine();
+                String s5 = file.nextLine();
                 
                 d.setName(doctorName);
                 d.setTimeAvail(time);
@@ -42,9 +49,13 @@ class readDataFile {
                 }else if(dayString.equals("Saturday")){
                     day = 6;
                 }
+
+                d.setDay(day);
+
+                doctorInfo.add(d);
             }
         } catch (FileNotFoundException e) {
-            //error
+            System.out.println("File not found");
         }
     
         //file.close();
