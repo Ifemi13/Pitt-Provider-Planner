@@ -180,7 +180,9 @@ class readDataFile {
         System.out.println("\nList of Available Doctors:");
         for(int i = 0; i < doctorInfo.size(); i++){
             Doctor d = doctorInfo.get(i);
-            System.out.println(d.getName() + "\t\t " + d.getTimeString());
+            System.out.println("\n" + d.getName() + ", " + d.getTitle());
+            System.out.print("Time Available: " + d.getTimeString());
+            System.out.println("");
         }
     }
 
