@@ -6,6 +6,7 @@ class readDataFile {
 
     String doctorName;
     String doctorTitle;
+    String timeString;
     int time;
     String appointmentType;
     int day;
@@ -35,7 +36,7 @@ class readDataFile {
 
                 String dayString = file.nextLine();
 
-                String timeString = file.nextLine();
+                timeString = file.nextLine();
                 String[] dTime = timeString.split("Time: ");
                 timeString = dTime[1];
                 //System.out.println(timeString);
