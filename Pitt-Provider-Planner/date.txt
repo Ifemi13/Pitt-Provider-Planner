@@ -1,0 +1,82 @@
+this is just my date class in case anyone wants to use Italian
+
+/**
+ *
+ * @author Mitch
+ */
+public class Date {
+// julian calender    
+    final int[] monthDaysFrom = {0,31,59,90,120,151,181,212,243,273,304,334};
+    int day = 0;
+    int intMonth = 0;
+    String stringMonth = "";
+    int year = 0; // is assumed to be AD
+    int julianCal = 0;
+    
+    public Date(int inDay, int inIntMonth, int inYear){
+        day = inDay;
+        intMonth = inIntMonth;
+        year = inYear; // is assumed to be AD
+        setJulianCal(inDay,inIntMonth,inYear);
+    }
+    
+    public void toStringMonth(int numberMonth){
+        
+    }
+    
+        
+    public void setJulianCal(int inDay,int inIntMonth,int inYear){
+        julianCal = inYear * 365;
+        julianCal += monthDaysFrom[intMonth];
+        julianCal += day;
+    }
+    
+    public int toJulianCal(int inDay,int inIntMonth,int inYear){
+        julianCal = inYear * 365;
+        julianCal += monthDaysFrom[intMonth];
+        julianCal += day;
+        return julianCal;
+    }
+    
+    public void setDay( int inDay){
+        day = inDay;
+    }
+    
+    public void setIntMonth(int inIntMonth){
+        intMonth = inIntMonth;
+    }
+    
+    public void setStringMonth(String inStringMonth){
+        stringMonth = inStringMonth;
+    }
+    
+    public void setYear(int inYear){
+        year = inYear;
+    }
+    
+    public void setJulianCal(int inJulianCal){
+        julianCal = inJulianCal;
+    }
+
+    public int getDay(){
+        return day;
+    }
+    
+    public int getIntMonth(){
+        return intMonth;
+    }
+    
+    public String getStringMonth(){
+        return stringMonth;
+    }
+    
+    public int getYear(){
+        return year;
+    }
+    
+    public int getJulianCal(){
+        return julianCal;
+    }
+    
+    
+}
